@@ -21,6 +21,7 @@ HOST_IP=$(docker network inspect mesh -f "{{(index .IPAM.Config 0).Gateway}}")
 # Step 2: Run
 
 cd meshsim
+pip install -r requirements.txt
 ./meshsim.py --node-provider libp2p $HOST_IP
 ```
 
